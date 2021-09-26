@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: palegreen;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
