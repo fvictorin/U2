@@ -8,4 +8,40 @@ body {
     background-color: palegreen;
     color: #000000;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 7px;
+}
+
+nav {
+    background-color: pink;
+    position: sticky;
+    padding: 4px 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+nav a.thisPage {
+    background-color: green;
+
+
+h1, h2 {
+    color: darkgreen;
+    text-align: center;
+}
+
+footer {
+    border-top: 1px #000000;
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 0.9rem;
+    text-align-last: right;
 }
