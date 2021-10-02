@@ -29,9 +29,16 @@ nav ul {
     gap: 30px;
 }
 
+
 nav a.thisPage {
     background-color: green;
 
+.wrapper div {
+        width: 80px;
+        height: 30px;
+        padding: 20px;
+    }
+    
 
 h1, h2 {
     color: darkgreen;
