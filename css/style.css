@@ -7,14 +7,26 @@ html {
 body {
     background-color: palegreen;
     color: #000000;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    max-width: 750px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 7px;
 }
 
+
+#box1 {
+    background-color: rgb(255, 0, 212);
+}
+
+#box2 {
+    background-color: rgb(255, 0, 212);
+}
+
+#box3 {
+    background-color: rgb(255, 0, 212);
+}
+
 nav {
-    background-color: pink;
     position: sticky;
     padding: 4px 0;
     font-size: 2rem;
@@ -27,16 +39,24 @@ nav ul {
     display: flex;
     list-style-type: none;
     gap: 30px;
+    }
+
+
+
+h1 {
+    border: 1px black; !important
 }
+
 
 
 nav a.thisPage {
     background-color: green;
 
-.wrapper div {
-        width: 80px;
-        height: 30px;
-        padding: 20px;
+.nav div {
+    border: 1px;
+    width: 80px;
+    height: 30px;
+    padding: 20px;
     }
     
 
