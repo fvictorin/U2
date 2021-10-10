@@ -20,8 +20,7 @@ body {
         "main main"
         "img img"
         "source source"
-        "question question"
-        "stycke stycke"
+        "question stycke"
         "footer footer";
 }
 
@@ -33,11 +32,6 @@ h1, h2 {
 h1 {
     grid-area: header;
 }
-/*
-#box1, #box2, #box3 {
-    background-color: rgb(58, 190, 69);
-}
-*/
 
 nav ul {
     display: flex;
@@ -66,7 +60,7 @@ nav a.thispage {
 
 nav a:hover, nav a:active {
     background-color: chartreuse;
-    color: black
+    color: black;
 }
 
 main {
