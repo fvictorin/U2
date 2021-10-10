@@ -11,6 +11,18 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 7px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content min-content auto auto min-content min-content 70px;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main main"
+        "img img"
+        "source source"
+        "question question"
+        "stycke stycke"
+        "footer footer";
 }
 
 h1, h2 {
@@ -18,34 +30,83 @@ h1, h2 {
     text-align: center;
 }
 
-#box1, #box2, #box3 {
-    background-color: rgb(255, 0, 212);
-    Padding: 10px 10px;
-    font-size: 2rem;
-    position: sticky;
+h1 {
+    grid-area: header;
 }
+/*
+#box1, #box2, #box3 {
+    background-color: rgb(58, 190, 69);
+}
+*/
 
 nav ul {
     display: flex;
     list-style-type: none;
     justify-content: center;
+    flex-direction: row;
     gap: 30px;
+    margin: 0;
+    Padding: 0;
+    font-size: 2rem;
+    grid-area: nav;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link, nav a:visited {
+    background-color: rgb(83, 233, 108);
+    color: black;
+}
+
+nav a.thispage {
+    background-color: rgb(9, 145, 9);
+}
+
+nav a:hover, nav a:active {
+    background-color: chartreuse;
+    color: black
+}
+
+main {
+    grid-area: main;
 }
 
 img {
     max-width: 100%;
     border-radius: 30px;
     text-align: center;
+    grid-area: img;
 }
 
-nav a.thispage {
-    background-color: green;
+.column1 {
+    float:left;
+    width: 47%;
+}
+
+.column2 {
+    float:right;
+    width: 47%;
+}
+
+#source {
+    grid-area: source;
+}
+
+#question {
+    grid-area: question;
+}
+
+#stycke {
+    grid-area: stycke;
 }
 
 footer {
     border-top: 1px #000000;
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 5px;
     font-size: 0.8rem;
     text-align-last: right;
+    grid-area: footer;
 }
