@@ -8,17 +8,17 @@ body {
     background-color: palegreen;
     color: #000000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 0 7px;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: min-content min-content auto auto min-content min-content 70px;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: min-content min-content auto auto min-content auto 70px;
     grid-template-areas: 
         "header header"
-        "nav nav"
-        "main main"
-        "img img"
+        "nav    nav"
+        "main   main"
+        "img    img"
         "source source"
         "question stycke"
         "footer footer";
@@ -33,6 +33,10 @@ h1 {
     grid-area: header;
 }
 
+nav {
+    grid-area: nav;
+}
+
 nav ul {
     display: flex;
     list-style-type: none;
@@ -42,7 +46,6 @@ nav ul {
     margin: 0;
     Padding: 0;
     font-size: 2rem;
-    grid-area: nav;
 }
 
 nav a {
@@ -59,7 +62,7 @@ nav a.thispage {
 }
 
 nav a:hover, nav a:active {
-    background-color: chartreuse;
+    background-color: rgb(52, 219, 60);
     color: black;
 }
 
@@ -74,25 +77,25 @@ img {
     grid-area: img;
 }
 
-.column1 {
-    float:left;
-    width: 47%;
+.bilder {
+    opacity: 0.5;
+    transition: transform 2s;
 }
 
-.column2 {
-    float:right;
-    width: 47%;
+.bilder:hover {
+    opacity: 1;
+    transform: scale(1.02)
 }
 
-#source {
+.source {
     grid-area: source;
 }
 
-#question {
+.question {
     grid-area: question;
 }
 
-#stycke {
+.stycke {
     grid-area: stycke;
 }
 
@@ -104,3 +107,28 @@ footer {
     text-align-last: right;
     grid-area: footer;
 }
+
+@media screen and (max-width: 500px){
+    body {
+        grid-template-columns: 30% 70%;
+        grid-template-rows: min-content min-content auto auto min-content auto auto min-content;
+        grid-template-areas: 
+            "header header"
+            "nav    nav"
+            "main   main"
+            "img    img"
+            "source source"
+            "question question"
+            "stycke stycke"
+            "footer footer";    
+        }
+
+@media screen and (max-width: 364px){    
+        nav ul {
+        flex-direction: column;         
+    }
+
+@media screen and (max-width: 300px){
+        body {
+        display: block; 
+        }
