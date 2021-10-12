@@ -109,20 +109,10 @@ footer {
 }
 
 @media screen and (max-width: 500px){
-    body {
-        grid-template-columns: 30% 70%;
-        grid-template-rows: min-content min-content auto auto min-content auto auto min-content;
-        grid-template-areas: 
-            "header header"
-            "nav    nav"
-            "main   main"
-            "img    img"
-            "source source"
-            "question question"
-            "stycke stycke"
-            "footer footer";    
-        }
-    }        
+        body {
+        display: block; 
+    }
+}
 
 @media screen and (max-width: 364px){    
         nav ul {
@@ -130,8 +120,13 @@ footer {
     }
 }    
 
-@media screen and (max-width: 300px){
-        body {
-        display: block; 
+@media screen and (max-width: 350px){
+
+    .bilder {
+        opacity: 1;
+    }
+
+    .bilder:hover {
+        transform: scale(1)
     }
 }
