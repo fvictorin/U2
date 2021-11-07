@@ -12,16 +12,17 @@ body {
     margin: 0 auto;
     padding: 0 7px;
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: min-content min-content auto auto min-content auto 70px;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: min-content min-content auto auto auto auto auto 70px;
     grid-template-areas: 
-        "header header"
-        "nav    nav"
-        "main   main"
-        "img    img"
-        "source source"
-        "question stycke"
-        "footer footer";
+        "nav    header header"
+        "nav    main       main"
+        "nav    main       main"
+        "nav    img        img"
+        "nav    source     source"
+        "nav    question   question"
+        "nav    stycke     stycke"
+        "footer footer     footer";
 }
 
 h1, h2 {
@@ -37,19 +38,22 @@ nav {
     grid-area: nav;
 }
 
-nav ul {
-    display: flex;
+nav ul {/*
+    flex-direction: column;
+    display: inline;*/
     list-style-type: none;
-    justify-content: center;
-    flex-direction: row;
-    gap: 30px;
     margin: 0;
-    Padding: 0;
+    Padding: 10px;
     font-size: 2rem;
+    position: fixed;
 }
 
 nav a {
     text-decoration: none;
+	display: block;    
+    margin-top: 30px;
+    position: relative;
+    top: 100px;
 }
 
 nav a:link, nav a:visited {
@@ -108,19 +112,25 @@ footer {
     grid-area: footer;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 580px){
         body {
-        display: block; 
-    }
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            gap: 10px;
+        }
+
+        nav a {
+            top: 0px;
+        }
 }
 
-@media screen and (max-width: 364px){    
-        nav ul {
-        flex-direction: column;         
-    }
-}    
-
-@media screen and (max-width: 350px){
+@media screen and (max-width: 450px) {
 
     .bilder {
         opacity: 1;
@@ -130,3 +140,11 @@ footer {
         transform: scale(1)
     }
 }
+
+@media screen and (max-width: 364px) {   
+                
+    nav ul {
+        Padding: 10px;
+        font-size: 1rem;
+    }
+}    
